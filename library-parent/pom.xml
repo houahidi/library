@@ -66,14 +66,13 @@
 	</modules>
 
 	<build>
+		<finalName>library-web</finalName>
 		<resources>
 			<resource>
 				<directory>src/main/resources</directory>
 				<filtering>true</filtering>
 			</resource>
-
 		</resources>
-
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
@@ -269,6 +268,9 @@
 				<configuration>
 					<parallel>methods</parallel>
 					<threadCount>10</threadCount>
+					<excludes>
+				      <exclude>**/*ITestCase*</exclude>
+				    </excludes>
 				</configuration>
 			</plugin>
 			<plugin>
@@ -289,9 +291,49 @@
 						</goals>
 					</execution>
 				</executions>
+				<configuration>
+					<includes>
+						<include>**/*ITestCase*</include>
+					</includes>
+				</configuration>
 			</plugin>
+			
+		
+			<plugin>
+				<groupId>org.apache.tomcat.maven</groupId>
+				<artifactId>tomcat7-maven-plugin</artifactId>
+				<version>2.2</version>
+				<configuration>
+					<url>http://localhost:8080/manager/text</url>
+					<server>tomcat</server>
+					 <path>/library-web</path>
+				</configuration>
+				<executions>
+				    <execution>
+				      <id>start-tomcat</id>
+				      <phase>pre-integration-test</phase>
+				      <goals>
+				        <goal>run</goal>
+				      </goals>
+				      <configuration>
+				        <fork>true</fork>
+				      </configuration>
+				    </execution>
+				    <execution>
+				      <id>stop-tomcat</id>
+				      <phase>post-integration-test</phase>
+				      <goals>
+				        <goal>shutdown</goal>
+				      </goals>
+				    </execution>
+				  </executions>
+			</plugin>
+			<plugin>
+	          <groupId>org.apache.maven.plugins</groupId>
+	          <artifactId>maven-release-plugin</artifactId>
+	          <version>2.5.3</version>
+	        </plugin>
 		</plugins>
 	</build>
-
 
 </project>
