@@ -313,7 +313,7 @@
 				      <id>start-tomcat</id>
 				      <phase>pre-integration-test</phase>
 				      <goals>
-				        <goal>run</goal>
+				        <goal>deploy</goal>
 				      </goals>
 				      <configuration>
 				        <fork>true</fork>
@@ -323,7 +323,7 @@
 				      <id>stop-tomcat</id>
 				      <phase>post-integration-test</phase>
 				      <goals>
-				        <goal>shutdown</goal>
+				        <goal>undeploy</goal>
 				      </goals>
 				    </execution>
 				  </executions>
