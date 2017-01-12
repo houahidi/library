@@ -1,0 +1,76 @@
+
+body,html{text-align:center;font-size:11px;font-family:arial;margin:0;padding:0;}
+.contain_all{width:990px;}
+body{background:#f4f4f5; background-image:url(../images/bg.jpg); background-repeat:repeat-x }
+var{ font-style:normal}
+a:link{ padding:0}
+
+
+/*bandeau logo*/
+
+.top_logo_home{background: url(../images/bg_top.jpg) no-repeat; text-align:left; height:106px; width:990px}
+
+
+/*menu pricipal*/
+.menu_main{background: url(../images/bg_menu_main.jpg) no-repeat; height:39px; width:990px; padding: 0px 0px 0px 0px; }
+
+.menu_main_space{ width:5px;height: 39px;float:right;}
+.menu_main_link_sel {background: url(../images/bt_menu_main_on.jpg) repeat-x; height: 39px;color: #FFF; font-size: 12px;padding: 12px 15px 0px 15px;margin-bottom: 0px 0px -12px 0px;font-family:verdana;float:right;text-transform:uppercase; text-align:center; border-left:#ffffff 1px solid;}
+.menu_main_link {height:39px; float:right; text-align:center;}
+a.menu_main_link:link,a.menu_main_link:visited { float:left;color: #455394;text-decoration: none;padding: 12px 15px 0px 15px;margin: 0px 0px -12px 0px;font-size: 12px;font-family:verdana;text-transform:uppercase;border-left:#ffffff 1px solid;}
+a.menu_main_link:hover {background: url(../images/bt_menu_main_on.jpg) repeat-x;color:#FFF;}
+
+
+/*sous menu*/
+.menu_sub {background:url(../images/bg_menu_sub.jpg) no-repeat; height:24px; width:990px; padding: 0px 0px 0px 0px;}
+.menu_sub_link_sel {background: url(../images/bt_menu_sub_on.jpg) no-repeat; height:24px;color:#ffffff;font-size:12px; padding:4px 10px 0px 25px; float:right; text-align:left; margin-right:20px;}
+.menu_sub_link { float:right; text-align:left; height:24px;}
+a.menu_sub_link:link , a.menu_sub_link:visited { float:left; color: #ffffff; text-decoration: none;font-size: 12px;background: url(../images/bt_menu_sub.jpg) no-repeat; padding:4px 10px 0px 25px;margin-right:20px; }
+a.menu_sub_link:hover  {background: url(../images/bt_menu_sub_on.jpg) no-repeat;color:#ffffff;font-size: 12px;}
+
+
+/*barre fil conducteur & action*/
+.menu_action{background: url(../images/bg_action.jpg) no-repeat; height:68px; width:990px;}
+
+.bg_path{padding: 15px 0px 0px 15px; color:#4c5a9a; font-size:10px; text-transform:uppercase; float:left}
+
+a.path:link, a.path:visited {	color: #797979;	text-decoration: none;	text-transform:uppercase}
+a.path:hover {	color: #4c5a9a;	text-decoration: none;}
+
+.action{ float:right; padding: 0px 5px 0px 0px;}
+
+
+/*contenu*/
+.bg_content{ background:url(../images/bg_page.jpg) repeat-y;  height:100%; text-align:center;}
+
+.bg_content h1 { background:url(../images/bg_title.jpg) no-repeat; width:893px; height:43px; color:#333333; font-size:14px; font-family:arial; text-transform:uppercase; padding:7px 0px 0px 38px; margin:0px; text-align:left;}
+
+.bg_table{ background:#f4f4f5; padding:5px 15px 15px 15px; width:888px; margin-left:5px; margin-bottom:10px; text-align:center;}
+.table-form{border-collapse:collapse; width:100%;}
+.table-form td{ height:30px; font-family:arial; font-size:11px; color:#333; text-align:left}
+.table-form input{ color:#6b6b6b;font-size:10px;border-color:#d2d1d1;border-style:solid;border-width:1px;}
+.table-form select{ color:#6b6b6b;font-size:10px;border-color:#d2d1d1;border-style:solid;border-width:1px;}
+
+.table-table{color:#4b4b4b; background-color:#eaedf9; text-align:center; width:100%; font-size:11px; border:1px solid #fff;}
+.table-table thead th{ font-size:11px; background:url(../images/bg_table.jpg) repeat-x; color:#FFFFFF; height:26px; border-right:1px solid #fff;border-top:1px solid #fff;}
+.table-table td{ height:36px; border-collapse:collapse; border-right:1px solid #fff;border-top:1px solid #fff;}
+
+.bg_bottom{ background:url(../images/bg_bottom.jpg) no-repeat; width:990px; height:35px;}
+
+/* menu pages*/
+.bg_content_home{ background:url(../images/bg_page.jpg) repeat-y; padding:10px 2px 30px 28px; height:100%; text-align:center;}
+
+.menu_home_link {height:73px; float:left; text-align:left;width:923px;}
+a.menu_home_link:link, a.menu_home_link:visited {color: #606fac;width:923px;text-decoration: none;padding: 30px 0px 30px 105px;margin: 0px 0px 0px 0px;font-size: 12px;font-family:arial;text-transform:uppercase;background: url(../images/bt_home.jpg) no-repeat;font-weight:bold;}
+
+a.menu_home_link:hover  {background: url(../images/bt_home_on.jpg) no-repeat;color: #3d3d3d;font-weight:bold;}
+
+field { 
+	width:200px ; 
+}
+field_error {
+	background: yellow ;
+}
+
+
+

@@ -1,0 +1,26 @@
+
+body,html{text-align:center;font-size:11px;font-family:arial;margin:0;padding:0;}
+.contain_all{width:990px;}
+body{background:#f4f4f5; background-image:url(../images/bg.jpg); background-repeat:repeat-x }
+var{ font-style:normal}
+a:link{ padding:0}
+
+
+/*bandeau logo*/
+.top_logo_home{background: url(../images/bg_top.jpg) no-repeat; text-align:left; height:106px; width:990px}
+
+/*text home*/
+
+.menu_action_home{background: url(../images/bg_action_home.jpg) no-repeat; font-family:arial; font-size:11px; color:#7e7f7e; text-transform:uppercase; height:48px; width:990px; text-align:left;}
+.welcome{padding:17px 0px 0px 37px; float:left;}
+
+/*menu home*/
+
+.bg_content_home{ background:url(../images/bg_page.jpg) repeat-y; padding:20px 2px 20px 28px ;height:100%; text-align:center;}
+
+.menu_home_link {height:73px; float:left; text-align:left;width:923px;}
+a.menu_home_link:link, a.menu_home_link:visited {color: #606fac;width:923px;text-decoration: none;padding: 30px 0px 30px 105px;margin: 0px 0px 0px 0px;font-size: 12px;font-family:arial;text-transform:uppercase;background: url(../images/bt_home.jpg) no-repeat;font-weight:bold;}
+
+a.menu_home_link:hover  {background: url(../images/bt_home_on.jpg) no-repeat;color: #3d3d3d;font-weight:bold;}
+
+.bg_bottom{ background:url(../images/bg_bottom.jpg) no-repeat; width:990px; height:35px;}

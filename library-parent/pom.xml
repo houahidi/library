@@ -1,0 +1,297 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>com.sopra</groupId>
+	<artifactId>library-parent</artifactId>
+	<version>1.0.0-SNAPSHOT</version>
+	<packaging>pom</packaging>
+
+	<name>library-parent</name>
+	<url>http://maven.apache.org</url>
+
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<maven.compiler.source>1.8</maven.compiler.source>
+		<maven.compiler.target>1.8</maven.compiler.target>
+	</properties>
+
+	<dependencies>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.12</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>log4j</groupId>
+			<artifactId>log4j</artifactId>
+			<version>1.2.17</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>5.1.40</version>
+		</dependency>
+
+	</dependencies>
+	<distributionManagement>
+		<!-- Publish versioned releases here -->
+		<repository>
+			<id>nexus</id>
+			<name>My releases</name>
+			<url>http://localhost:8081/nexus/content/repositories/releases/</url>
+		</repository>
+
+		<!-- Publish snapshots here -->
+		<snapshotRepository>
+			<id>nexus</id>
+			<name>My snapshots</name>
+			<url>http://localhost:8081/nexus/content/repositories/snapshots/</url>
+		</snapshotRepository>
+		<site>
+			<id>nexus</id>
+			<url>dav:http://localhost:8081/nexus/content/sites/site/</url>
+		</site>
+	</distributionManagement>
+
+	<modules>
+		<module>library-modele</module>
+		<module>library-dao</module>
+		<module>library-services</module>
+		<module>library-web</module>
+
+	</modules>
+
+	<build>
+		<resources>
+			<resource>
+				<directory>src/main/resources</directory>
+				<filtering>true</filtering>
+			</resource>
+
+		</resources>
+
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.6.0</version>
+				<configuration>
+					<source>${maven.compiler.source}</source>
+					<target>${maven.compiler.target}</target>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-site-plugin</artifactId>
+				<version>3.6</version>
+
+				<configuration>
+					<reportPlugins>
+						<plugin>
+							<groupId>org.apache.maven.plugins</groupId>
+							<artifactId>maven-surefire-report-plugin</artifactId>
+							<version>2.19</version>
+							<reportSets>
+								<reportSet>
+									<!-- defines unit test reports in the modules -->
+									<id>unit-tests</id>
+									<reports>
+										<report>report</report>
+									</reports>
+								</reportSet>
+
+								<reportSet>
+									<!-- defines aggregate unit test report -->
+									<id>unit-tests-aggregate</id>
+									
+									<reports>
+										<report>report</report>
+									</reports>
+									<configuration>
+										<aggregate>true</aggregate>
+									</configuration>
+								</reportSet>
+
+								<reportSet>
+									<!-- defines integration test reports in the modules -->
+									<id>integration-tests</id>
+									<reports>
+										<report>failsafe-report-only</report>
+									</reports>
+								</reportSet>
+
+								<reportSet>
+									<!-- defines aggregate integration test report -->
+									<id>integration-tests-aggregate</id>
+									
+									<reports>
+										<report>failsafe-report-only</report>
+									</reports>
+									<configuration>
+										<aggregate>true</aggregate>
+									</configuration>
+								</reportSet>
+							</reportSets>
+						</plugin>
+						<plugin>
+							<groupId>org.codehaus.mojo</groupId>
+							<artifactId>taglist-maven-plugin</artifactId>
+							<version>2.4</version>
+							<reportSets>
+								<reportSet>
+									<!-- defines taglist reports in the modules -->
+									<id>taglist-report</id>
+									<reports>
+										<report>taglist</report>
+									</reports>
+								</reportSet>
+
+								<reportSet>
+									<!-- defines taglist aggregate report -->
+									<id>taglist-aggregate</id>
+									
+									<reports>
+										<report>taglist</report>
+									</reports>
+									<configuration>
+										<aggregate>true</aggregate>
+									</configuration>
+								</reportSet>
+							</reportSets>
+						</plugin>
+						<!-- <plugin> <groupId>org.apache.maven.plugins</groupId> <artifactId>maven-javadoc-plugin</artifactId> 
+							<version>2.10.4</version> </plugin> -->
+						<plugin>
+							<groupId>org.apache.maven.plugins</groupId>
+							<artifactId>maven-checkstyle-plugin</artifactId>
+							<version>2.17</version>
+							<configuration>
+								<aggregate>true</aggregate>
+								<!--also set this to link to generated source reports -->
+								<linkXRef>true</linkXRef>
+							</configuration>
+
+						</plugin>
+						<plugin>
+							<groupId>org.apache.maven.plugins</groupId>
+							<artifactId>maven-jxr-plugin</artifactId>
+							<version>2.5</version>
+						</plugin>
+						<plugin>
+							<groupId>org.codehaus.mojo</groupId>
+							<artifactId>cobertura-maven-plugin</artifactId>
+							<version>2.7</version>
+							<reportSets>
+								<reportSet>
+									<!-- defines cobertura projects- and aggregate-report -->
+									<id>cobertura</id>
+									<reports>
+										<report>cobertura</report>
+									</reports>
+									<configuration>
+										<aggregate>true</aggregate>
+									</configuration>
+								</reportSet>
+							</reportSets>
+							<configuration>
+								<formats>
+									<format>html</format>
+									<format>xml</format>
+								</formats>
+								<instrumentation>
+									<excludes>
+										<exclude>**/*.class</exclude>
+									</excludes>
+								</instrumentation>
+							</configuration>
+
+						</plugin>
+						<plugin>
+							<groupId>org.apache.maven.plugins</groupId>
+							<artifactId>maven-pmd-plugin</artifactId>
+							<version>3.7</version>
+							<reportSets>
+								<reportSet>
+									<!-- defines pmd reports in the modules -->
+									<id>pmd-report</id>
+									<reports>
+										<report>pmd</report>
+									</reports>
+								</reportSet>
+
+								<reportSet>
+									<!-- defines pmd aggregate report -->
+									<id>pmd-aggregate</id>
+									
+									<reports>
+										<report>pmd</report>
+									</reports>
+									<configuration>
+										<aggregate>true</aggregate>
+									</configuration>
+								</reportSet>
+
+								<reportSet>
+									<!-- defines cpd reports in the modules -->
+									<id>cpd-report</id>
+									<reports>
+										<report>cpd</report>
+									</reports>
+								</reportSet>
+
+								<reportSet>
+									<!-- defines cpd aggregate report -->
+									<id>cpd-aggregate</id>
+									
+									<reports>
+										<report>cpd</report>
+									</reports>
+									<configuration>
+										<aggregate>true</aggregate>
+									</configuration>
+								</reportSet>
+							</reportSets>
+						</plugin>
+						
+					</reportPlugins>
+				</configuration>
+			</plugin>
+
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<version>2.19.1</version>
+				<configuration>
+					<parallel>methods</parallel>
+					<threadCount>10</threadCount>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-failsafe-plugin</artifactId>
+				<version>2.19.1</version>
+				<executions>
+					<execution>
+						<id>integration-test</id>
+						<goals>
+							<goal>integration-test</goal>
+						</goals>
+					</execution>
+					<execution>
+						<id>verify</id>
+						<goals>
+							<goal>verify</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
+
+
+</project>

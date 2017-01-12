@@ -1,0 +1,12 @@
+<Context docBase="library-web" path="/library-web" reloadable="true">
+
+	<Resource name="jdbc/UniLibraryDS" auth="Container"
+		type="javax.sql.DataSource" maxActive="100" maxIdle="30"
+		maxWait="10000" username="admin" password="admin"
+		driverClassName="com.mysql.jdbc.Driver"
+		url="jdbc:mysql://ITEM-69262:3306/magiclibrary_db?autoReconnect=true">
+	</Resource>
+	
+	
+	
+</Context>
