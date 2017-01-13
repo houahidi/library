@@ -52,7 +52,7 @@
 		</snapshotRepository>
 		<site>
 			<id>nexus</id>
-			<url>dav:http://localhost:8081/nexus/content/sites/SiteRepository/</url>
+			<url>dav:http://item-69370.dhcp.tuni.tn.sopra:8081/repository/maven-site/</url>
 		</site>
 	</distributionManagement>
 
