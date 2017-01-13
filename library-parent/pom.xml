@@ -41,14 +41,14 @@
 		<repository>
 			<id>nexus</id>
 			<name>My releases</name>
-			<url>http://localhost:8081/nexus/content/repositories/releases/</url>
+			<url>http://item-69370.dhcp.tuni.tn.sopra:8081/repository/maven-releases/</url>
 		</repository>
 
 		<!-- Publish snapshots here -->
 		<snapshotRepository>
 			<id>nexus</id>
 			<name>My snapshots</name>
-			<url>http://localhost:8081/nexus/content/repositories/snapshots/</url>
+			<url>http://item-69370.dhcp.tuni.tn.sopra:8081/repository/maven-snapshots/</url>
 		</snapshotRepository>
 		<site>
 			<id>nexus</id>
