@@ -2,6 +2,14 @@ echo "-----------------------------------------"
 echo "Start tomcat instance"
 echo "-----------------------------------------"
 
-set CATALINA_HOME="/Users/houahidi/Servers/apache-tomcat-8.0.39"
-set PATH=$CATALINA_HOME/bin:$PATH
-./catalina.sh start
+export CATALINA_HOME="/Users/houahidi/Servers/apache-tomcat-8.5.8"
+
+$CATALINA_HOME/bin/catalina.sh start
+
+echo "-----------------------------------------"
+echo "tomcat is starting         			   "
+
+sleep 3
+
+echo "tomcat started            			   "
+echo "-----------------------------------------"
