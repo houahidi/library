@@ -4,11 +4,11 @@
   <parent>
     <groupId>com.sopra</groupId>
     <artifactId>library-parent</artifactId>
-    <version>1.0.0</version>
+    <version>1.0.1-SNAPSHOT</version>
   </parent>
   <groupId>com.sopra</groupId>
   <artifactId>library-services</artifactId>
-  <version>1.0.0</version>
+  <version>1.0.1-SNAPSHOT</version>
   <name>library-services</name>
   <url>http://maven.apache.org</url>
   <properties>
@@ -18,7 +18,7 @@
   	<dependency>
   		<groupId>com.sopra</groupId>
   		<artifactId>library-dao</artifactId>
-  		<version>1.0.0</version>
+  		<version>1.0.1-SNAPSHOT</version>
   	</dependency>
   </dependencies>
 </project>

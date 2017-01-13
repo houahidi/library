@@ -3,7 +3,7 @@
 
 	<groupId>com.sopra</groupId>
 	<artifactId>library-parent</artifactId>
-	<version>1.0.0</version>
+	<version>1.0.1-SNAPSHOT</version>
 	<packaging>pom</packaging>
 
 	<name>library-parent</name>
@@ -348,7 +348,7 @@
 	
 	<scm>
     <developerConnection>scm:git:https://github.com/houahidi/library.git</developerConnection>
-    <tag>library-1.0.1</tag>
+    <tag>HEAD</tag>
   </scm>
 
 </project>
