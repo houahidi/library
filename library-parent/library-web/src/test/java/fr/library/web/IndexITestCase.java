@@ -24,7 +24,7 @@ public class IndexITestCase {
 
 	@Test
 	public void test() {
-		final String ADDRESS = "http://localhost:8080/library-web";
+		final String ADDRESS = "http://localhost:8180/library-web";
 
 		 	try {
 					WebConversation webConversation = new WebConversation();
