@@ -5,7 +5,7 @@
   <parent>
     <groupId>com.sopra</groupId>
     <artifactId>library-parent</artifactId>
-    <version>1.0.1-SNAPSHOT</version>
+    <version>1.0.0-SNAPSHOT</version>
   </parent>
   <artifactId>library-dao</artifactId>
   <name>library-dao</name>
@@ -17,7 +17,7 @@
   	<dependency>
   		<groupId>com.sopra</groupId>
   		<artifactId>library-modele</artifactId>
-  		<version>1.0.1-SNAPSHOT</version>
+  		<version>1.0.0-SNAPSHOT</version>
   	</dependency>
   </dependencies>
 </project>
