@@ -4,11 +4,11 @@
   <parent>
     <groupId>com.sopra</groupId>
     <artifactId>library-parent</artifactId>
-    <version>1.0.0</version>
+    <version>1.0.1-SNAPSHOT</version>
   </parent>
   <groupId>com.sopra</groupId>
   <artifactId>library-web</artifactId>
-  <version>1.0.0</version>
+  <version>1.0.1-SNAPSHOT</version>
   <packaging>war</packaging>
   <name>library-web Maven Webapp</name>
   <url>http://maven.apache.org</url>
