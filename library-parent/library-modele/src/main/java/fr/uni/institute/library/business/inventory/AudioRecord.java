@@ -10,6 +10,10 @@ import java.util.Date;
  * 
  */
 public class AudioRecord extends Title {
+	
+	
+	
+	
 
 	/**
 	 * the label (or editor) of this audio record
